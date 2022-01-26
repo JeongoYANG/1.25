@@ -5,6 +5,9 @@ package com.example.calc;
  * author     : yangjeongo
  * date       : 2022-01-24
  * desc       : 숫자2개와 연산자를 받아 계산하는 앱
+ *  * 클래스변수 :
+ *  * 파라미터,인스턴스변수 :
+ *  * 로컬변수 :
  * ================================
  * DATE              AUTHOR        NOTE
  * ================================
@@ -21,7 +24,7 @@ public class  CalcApp {
         this.opcode = opcode;
         this.num2 = num2;
         int res = 0;
-        if (opcode.equals("+")){
+        /*if (opcode.equals("+")){
             res = num1 + num2;
         }else if (opcode.equals("-")){
             res = num1 - num2;
@@ -29,8 +32,20 @@ public class  CalcApp {
             res = num1 * num2;
         }else if (opcode.equals("/")){
             res = num1 / num2;
+        }else {
+            res = 0;
+        }*/
+
+        switch (opcode){
+            case "+": res = num1 + num2; break;
+            case "-": res = num1 - num2; break;
+            case "*": res = num1 * num2; break;
+            case "/": res = num1 / num2; break;
         }
-        return String.format(" %d %s %d = %d ",
+
+
+        String result = String.format(" %d %s %d = %d ",
                 this.num1, this.opcode, this.num2, res);
+        return result;
     }
 }

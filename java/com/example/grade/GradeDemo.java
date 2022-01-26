@@ -22,9 +22,14 @@ public class GradeDemo {
         GradeApp gradeApp = new GradeApp();
         System.out.println("name");
         String name = scanner.next();
-        System.out.println("eng");
-        int eng = scanner.nextInt();
         System.out.println("kor");
         int kor = scanner.nextInt();
+        System.out.println("eng");
+        int eng = scanner.nextInt();
+        System.out.println("math");
+        int math = scanner.nextInt();
+        String grade = gradeApp.getGrade(name, kor, eng, math);
+        System.out.println(grade);
+
     }
 }

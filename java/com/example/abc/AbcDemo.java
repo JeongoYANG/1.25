@@ -20,5 +20,7 @@ public class AbcDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         AbcApp abcApp = new AbcApp();
+        String res = abcApp.getAbc();
+        System.out.println(res);
     }
 }

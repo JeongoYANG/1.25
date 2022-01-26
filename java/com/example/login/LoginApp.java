@@ -5,7 +5,7 @@ public class LoginApp {
     String id = "";
     String pw = "";
     String name = "";
-    static String PASSWORD = "abc";
+    static String PASSWORD = "com/example/abc";
 
 
     public String login (String id,String pw,String name){

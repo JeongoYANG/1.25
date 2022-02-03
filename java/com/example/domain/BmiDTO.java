@@ -1,4 +1,5 @@
-package com.example.bmi;
+package com.example.domain;
+
 
 /**
  * packageName: com.example.bmi
@@ -14,16 +15,28 @@ package com.example.bmi;
  * ================================
  * 2022-01-25         yangjeongo        최초 생성
  */
-public class BmiApp {
-    public static String webSite = "      Bmi ";
+public class BmiDTO {
+    public static String Bmi = "Bmi측정앱";
     private String name;
     private String cm;
     private String kg;
-    public String bmi (String name, String cm, String kg){
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name){
         this.name = name;
+    }
+    public String getCm(){
+        return cm;
+    }
+    public void setCm(String cm){
         this.cm = cm;
+    }
+    public String getKg(){
+        return kg;
+    }
+    public void setKg(String kg){
         this.kg = kg;
-        String res = String.format("%s 정상", this.name);
-        return res;
     }
 }

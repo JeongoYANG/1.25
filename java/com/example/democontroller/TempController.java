@@ -21,10 +21,11 @@ import java.util.Scanner;
 public class TempController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        GradeDTO[] grades = new GradeDTO[2];
+        System.out.println(" 학생수는 몇명? ");
+        int count = scanner.nextInt();
+        GradeDTO[] grades = new GradeDTO[count];
         for(int i = 0; i< grades.length; i++){
             System.out.println(" 수학점수 입력 ");
-            grades[i] = null;
             grades[i] = new GradeDTO();
             grades[i].setMath(scanner.nextInt());
         }

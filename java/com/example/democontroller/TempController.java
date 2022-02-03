@@ -21,15 +21,25 @@ import java.util.Scanner;
 public class TempController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(" 학생수 ");
-        int count = scanner.nextInt();
-        GradeDTO[] grades = new GradeDTO[count];
+        GradeDTO[] grades = new GradeDTO[2];
         for(int i = 0; i < grades.length; i++){
             grades[i] = new GradeDTO();
+            System.out.println(" 이름 ");
+            grades[i].setName(scanner.next());
+            System.out.println(" 수학 ");
             grades[i].setMath(scanner.nextInt());
+            System.out.println(" 국어 ");
+            grades[i].setKor(scanner.nextInt());
+            System.out.println(" 영어 ");
+            grades[i].setEng(scanner.nextInt());
+            System.out.println("==============");
         }
         for(int i = 0; i < grades.length; i++){
-            System.out.println(" 수학점수 : "+grades[i].getMath());
+            System.out.println(" 이름 : "+grades[i].getName());
+            System.out.println(" 수학 : "+grades[i].getMath());
+            System.out.println(" 국어 : "+grades[i].getKor());
+            System.out.println(" 영어 : "+grades[i].getEng());
+            System.out.println("==============");
         }
     }
 }

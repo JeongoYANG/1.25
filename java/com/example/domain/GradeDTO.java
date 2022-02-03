@@ -40,37 +40,28 @@ public class GradeDTO {
     private int eng;
     private int math;
 
-    public String getName() {
+    public String getName(){
         return name;
     }
-
-    public void setName(String name) {
+    public void setName(String name){
         this.name = name;
     }
-
-    public int getKor() {
+    public int getKor(){
         return kor;
     }
-
-    public void setKor(int kor) {
+    public void setKor(int kor){
         this.kor = kor;
     }
-
-    public int getEng() {
+    public int getEng(){
         return eng;
     }
-
-    public void setEng(int eng) {
+    public void setEng(int eng){
         this.eng = eng;
     }
-
-    public int getMath() {
+    public int getMath(){
         return math;
     }
-
-    public void setMath(int math) {
+    public void setMath(int math){
         this.math = math;
     }
-
-
 }

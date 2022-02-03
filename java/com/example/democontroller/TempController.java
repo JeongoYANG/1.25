@@ -20,7 +20,22 @@ import java.util.Scanner;
  */
 public class TempController {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        String[] names = {"홍정명", "노홍주", "양정오", "전종현", "정경준"};
+        String[] subjects = {"깊이", "정렬", "그래프", "해시", "완전탐색"
+                            , "스택", "힙", "이분탐색", "탐욕법", "DP",
+                                "너비",   "",     "",     "",     "",
+                                 "큐",     "",    "",     "",     ""};
+
+        for (int i = 0; i < names.length; i++) {
+            System.out.println(names[i]
+                    +" : "+subjects[i]
+                    +" , "+subjects[i + 5]
+                    +" , "+subjects[i + 10]
+                    +" , "+subjects[i + 15]);}
+    }
+
+
+        /**
         GradeDTO[] grades = new GradeDTO[2];
         for(int i = 0; i < grades.length; i++){
             grades[i] = new GradeDTO();
@@ -40,6 +55,6 @@ public class TempController {
             System.out.println(" 국어 : "+grades[i].getKor());
             System.out.println(" 영어 : "+grades[i].getEng());
             System.out.println("==============");
-        }
+        }**/
     }
-}
+

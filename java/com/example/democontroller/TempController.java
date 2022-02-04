@@ -21,20 +21,36 @@ import java.util.Scanner;
 public class TempController {
     public static void main(String[] args) {
         String[] arr = {"홍정명", "노홍주", "양정오", "전종현", "정경준",
-                            "깊이", "정렬", "그래프", "해시", "완전탐색"
-                            , "스택", "힙", "이분탐색", "탐욕법", "DP",
-                                "너비",   "",     "",     "",     "",
-                                 "큐",     "",    "",     "",     ""};
+                "깊이", "정렬", "그래프", "해시", "완전탐색"
+                , "스택", "힙", "이분탐색", "탐욕법", "DP",
+                "너비", "", "", "", "",
+                "큐", "", "", "", ""};
 
-        for (int i = 0; i < 5; i++) {
+        String s = "";
+        for (int i = 0; i < arr.length; i++) {
+            if (i < 5) {
+                System.out.print(i + "." +
+                        arr[i] + ":" + "\t" +
+                        arr[i + 5] + "," +
+                        arr[i + 10] + "," +
+                        arr[i + 15] + "," +
+                        arr[i + 20] +"\n");
+            }
+        }
+    }
+}
+
+
+
+
+
+        /*for (int i = 0; i < 5; i++) {
             System.out.println(arr[i] +" : "+
                     arr[i + 5] +" , "+
                     arr[i + 10] +" , "+
                     arr[i + 15] +" , "+
-                    arr[i + 20]);
-        }
-    }
-}
+                    arr[i + 20]);*/
+
 
 
         /**

@@ -20,25 +20,33 @@ import java.util.Scanner;
  */
 public class TempController {
     public static void main(String[] args) {
+        System.out.println(" Q1. 팀별 과제를 출력하세요 ");
         String[] arr = {"홍정명", "노홍주", "양정오", "전종현", "정경준",
                 "깊이", "정렬", "그래프", "해시", "완전탐색"
                 , "스택", "힙", "이분탐색", "탐욕법", "DP",
                 "너비", "", "", "", "",
-                "큐", "", "", "", ""};
+                "큐"};
 
         String s = "";
         for (int i = 0; i < arr.length; i++) {
-            s += i + ":" + arr[i] + "\t";
+            if(i%5 == 0){s += "\n";}
+            s += i + ":" +arr[i] + "\t";
+        }
 
-            /*if (i < 5) {
-                System.out.print(i + "." +
-                        arr[i] + ":" + "\t" +
-                        arr[i + 5] + "," +
-                        arr[i + 10] + "," +
-                        arr[i + 15] + "," +
-                        arr[i + 20] +"\n");*/
-            }
-            System.out.println(s);
+        System.out.println(s);
+        System.out.println(" Q2. 팀장이 맡은 과제만 출력하세요. 예) 홍정명: 깊이, 스택, 너비, 큐 ");
+        String zzang = "";
+        for (int i = 0; i < arr.length; i++){
+            if (arr[i].equals("홍정명")){
+                zzang += "";}
+            if(i < 5){}
+            zzang += i + ":" + arr[0]+ ": " + arr[5] + ", " +  arr[10] +", "+  arr[15] +", "+  arr[20];
+            if(i == 0){break;};
+
+
+
+        }
+
         }
     }
 

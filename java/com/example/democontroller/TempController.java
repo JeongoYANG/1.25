@@ -23,9 +23,7 @@ public class TempController {
         System.out.println(" Q1. 팀별 과제를 출력하세요 ");
         String[] arr = {"홍정명", "노홍주", "양정오", "전종현", "정경준",
                 "깊이", "정렬", "그래프", "해시", "완전탐색"
-                , "스택", "힙", "이분탐색", "탐욕법", "DP",
-                "너비", "", "", "", "",
-                "큐"};
+                , "스택", "힙", "이분탐색", "탐욕법", "DP"};
 
         String s = "";
         for (int i = 0; i < arr.length; i++) {
@@ -34,20 +32,38 @@ public class TempController {
         }
 
         System.out.println(s);
-        System.out.println(" Q2. 팀장이 맡은 과제만 출력하세요. 예) 홍정명: 깊이, 스택, 너비, 큐 ");
-        String zzang = "";
+        System.out.println(" Q2. 팀장이 맡은 과제만 출력하세요. 예) 홍정명: 깊이, 스택 ");
+        s = "";
+        String l = "홍정명";
         for (int i = 0; i < arr.length; i++){
-            if (arr[i].equals("홍정명")){
-                zzang += "";}
-            if(i < 5){}
-            zzang += i + ":" + arr[0]+ ": " + arr[5] + ", " +  arr[10] +", "+  arr[15] +", "+  arr[20];
-            if(i == 0){break;};
+            if (arr[i].equals(l)){
+                for (int j=0; j<3; j++){
+                    s += arr[i + j * 5]+ ",";
+                }
+            }
+            if(i == 14){break;};
 
 
 
         }
-
+        System.out.println(s);
+        System.out.println(" Q3 스택을 담당한 사람을 출력하세요. 예) 담당한 사람 : 홍정명 ");
+        s = "";
+        s = arr[10] +  "을 담당한 사람: " + arr[0];
+        for(int i=0; i< arr.length; i++){
+            if (arr[i].equals("스택을 담당한 사람")){
+                }
         }
+        System.out.println(s);
+        System.out.println(" Q4 팀원별 과제 수를 출력하세요 예) 홍정명(5개), 노홍주(2개), 양정오(2개), 전종현(2개), 정경준(2개)");
+        s = "";
+        
+
+
+
+
+
+    }
     }
 
 

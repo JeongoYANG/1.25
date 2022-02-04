@@ -27,44 +27,92 @@ public class TempController {
 
         String s = "";
         for (int i = 0; i < arr.length; i++) {
-            if(i%5 == 0){s += "\n";}
-            s += i + ":" +arr[i] + "\t";
+            if (i % 5 == 0) {
+                s += "\n";
+            }
+            s += i + ":" + arr[i] + "\t";
         }
 
         System.out.println(s);
         System.out.println(" Q2. 팀장이 맡은 과제만 출력하세요. 예) 홍정명: 깊이, 스택 ");
         s = "";
         String l = "홍정명";
-        for (int i = 0; i < arr.length; i++){
-            if (arr[i].equals(l)){
-                for (int j=0; j<3; j++){
-                    s += arr[i + j * 5]+ ",";
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals(l)) {
+                for (int j = 0; j < 3; j++) {
+                    s += arr[i + j * 5] + ",";
                 }
             }
-            if(i == 14){break;};
-
+            if (i == 14) {
+                break;
+            }
+            ;
 
 
         }
         System.out.println(s);
         System.out.println(" Q3 스택을 담당한 사람을 출력하세요. 예) 담당한 사람 : 홍정명 ");
         s = "";
-        s = arr[10] +  "을 담당한 사람: " + arr[0];
-        for(int i=0; i< arr.length; i++){
-            if (arr[i].equals("스택을 담당한 사람")){
-                }
+        s = arr[10] + "을 담당한 사람: " + arr[0];
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i].equals("스택을 담당한 사람")) {
+            }
         }
+
         System.out.println(s);
-        System.out.println(" Q4 팀원별 과제 수를 출력하세요 예) 홍정명(5개), 노홍주(2개), 양정오(2개), 전종현(2개), 정경준(2개)");
-        s = "";
-        
+        System.out.println(" Q4 팀원별 과제 수를 출력하세요 예) 홍정명(2개), 노홍주(2개), 양정오(2개), 전종현(2개), 정경준(2개)");
+        s ="";
+        String cm = "";
+        cm += arr[0] +"(2개), ";
+        cm += arr[1] +"(2개), ";
+        cm += arr[2] +"(2개), ";
+        cm += arr[4] +"(2개)";
+        cm = "";
+        int cm0 = 0;
+        int cm1 = 0;
+        int cm2 = 0;
+        int cm3 = 0;
+        int cm4 = 0;
+        int[] intArr = new int[5];
+        for(int i = 0; i< 5; i++){
+            if(arr[i].equals(arr[5])){
+                cm0++;
+            }
+            if(arr[i].equals(arr[6])){
+                cm1++;
+            }
+            if(arr[i].equals(arr[7])){
+                cm2++;
+            }
+            if(arr[i].equals(arr[8])){
+                cm3++;
+            }
+            if(arr[i].equals(arr[9])){
+                cm4++;
+            }
+            /*cm += arr[i] +"(2개), \n";*/
+        }
 
 
+        System.out.println(arr[0]+ "의 카운트는 " +cm0);
+        System.out.println(arr[1]+ "의 카운트는 " +cm1);
+        System.out.println(arr[2]+ "의 카운트는 " +cm2);
+        System.out.println(arr[3]+ "의 카운트는 " +cm3);
+        System.out.println(arr[4]+ "의 카운트는 " +cm4);
+
+        System.out.println(" Q5 입력한 과목의 인덱스를 추출하세요 ");
+        for (int i=0; i<arr.length; i++){
+            if (arr[i].equals("정렬")){
+                System.out.println("정렬의 인덱스: "+i);
+
+            }
+        }
 
 
+        }
 
     }
-    }
+
 
 
 

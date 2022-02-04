@@ -28,17 +28,20 @@ public class TempController {
 
         String s = "";
         for (int i = 0; i < arr.length; i++) {
-            if (i < 5) {
+            s += i + ":" + arr[i] + "\t";
+
+            /*if (i < 5) {
                 System.out.print(i + "." +
                         arr[i] + ":" + "\t" +
                         arr[i + 5] + "," +
                         arr[i + 10] + "," +
                         arr[i + 15] + "," +
-                        arr[i + 20] +"\n");
+                        arr[i + 20] +"\n");*/
             }
+            System.out.println(s);
         }
     }
-}
+
 
 
 
@@ -53,7 +56,7 @@ public class TempController {
 
 
 
-        /**
+        /*
         GradeDTO[] grades = new GradeDTO[2];
         for(int i = 0; i < grades.length; i++){
             grades[i] = new GradeDTO();
@@ -73,6 +76,6 @@ public class TempController {
             System.out.println(" 국어 : "+grades[i].getKor());
             System.out.println(" 영어 : "+grades[i].getEng());
             System.out.println("==============");
-        }**/
+        }*/
 
 

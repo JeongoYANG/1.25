@@ -1,15 +1,11 @@
 package com.example.democontroller;
 
 import com.example.domain.BmiDTO;
-import com.example.service.BmiService;
+import com.example.service.*;
 import com.example.domain.GoogleDTO;
-import com.example.service.GoogleService;
 import com.example.domain.CalcDTO;
-import com.example.service.CalcService;
 import com.example.domain.GradeDTO;
-import com.example.service.GradeService;
 import com.example.domain.LoginDTO;
-import com.example.service.LoginService;
 
 import java.util.Scanner;
 
@@ -31,15 +27,11 @@ public class StudentController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
         CalcDTO Cacl = new CalcDTO ();
-        CalcService calcService = new CalcService ();
         BmiDTO bmi = new BmiDTO ();
-        BmiService bmiService = new BmiService ();
         GoogleDTO Google = new GoogleDTO ();
-        GoogleService googleService = new GoogleService ();
-        GradeService gradeService = new GradeService ();
         GradeDTO Grade = new GradeDTO ();
         LoginDTO login = new LoginDTO ();
-        LoginService loginService = new LoginService ();
+        StudentService service = new StudentServiceImpl();
         while (true) {
             System.out.println ("메뉴 선택");
             String menu = "1.BMI 2.CALC 3.GOOGLE 4.GRADE 5.LOGIN";
@@ -56,20 +48,20 @@ public class StudentController {
                     bmi.setName (scanner.next ());
                     bmi.setCm (scanner.next ());
                     bmi.setKg (scanner.next ());
-                    res = bmiService.getbmi (bmi);
+                    res = service.getBmi (bmi);
                     break;        case "2":
                     res = "CALC";
                     System.out.println (CalcDTO.CALC + "\n 숫자1, 연산자, 숫자2 입력");
                     Cacl.setNum1 (scanner.nextInt ());
                     Cacl.setOpcode (scanner.next ());
                     Cacl.setNum2 (scanner.nextInt ());
-                    res = calcService.getCalc (Cacl);
+                    res = service.calc (Cacl);
                     break;
                 case "3":
                     res = "GOOGLE";
                     System.out.println (GoogleDTO.Google + "\n 검색어 입력");
                     Google.setSearch ();
-                    res = googleService.getGoogle (Google);
+                    res = service.search (Google);
                     break;
                 case "4":
                     res = "GRADE";
@@ -78,7 +70,7 @@ public class StudentController {
                     Grade.setKor (scanner.nextInt ());
                     Grade.setEng (scanner.nextInt ());
                     Grade.setMath (scanner.nextInt ());
-                    res = gradeService.getgrade (Grade);
+                    res = service.getGrade (Grade);
                     break;
                 case "5":
                     res = "LOGIN";
@@ -86,7 +78,7 @@ public class StudentController {
                     login.setName (scanner.next ());
                     login.setId (scanner.next ());
                     login.setPw (scanner.next ());
-                    res = loginService.getlogin (login);
+                    res = service.login (login);
                     break;
                 default:
                     res = "1~5 중 선택하세요";

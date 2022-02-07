@@ -21,26 +21,60 @@ public class StudentServiceImpl implements StudentService{
 
     @Override
     public String getBmi(BmiDTO bmi) {
-        return null;
+        return String.format("정상 입니다.", bmi.getName ());
     }
 
     @Override
     public String calc(CalcDTO Calc) {
-        return null;
+        int res = 0;
+        switch (Calc.getOpcode ()) {
+            case "+":
+                res = Calc.getNum1 () + Calc.getNum2 ();
+                break;
+            case "-":
+                res = Calc.getNum1 () - Calc.getNum2 ();
+                break;
+            case "*":
+                res = Calc.getNum1 () * Calc.getNum2 ();
+                break;
+            case "/":
+                res = Calc.getNum1 () / Calc.getNum2 ();
+                break;
+        }
+        return String.format ("%d %s %d = %d",
+                Calc.getNum1 (), Calc.getOpcode (), Calc.getNum2 (), res);
     }
 
     @Override
     public String search(GoogleDTO Google) {
-        return null;
+        return String.format("%s를(을) 검색한 결과 입니다",Google.getSearch ());
     }
 
     @Override
     public String getGrade(GradeDTO grade) {
-        return null;
+        int total = grade.getKor () + grade.getEng () + grade.getMath ();
+        int avg = total / 3;
+        String pass = (avg >= 60) ? "합격" : "불합격";
+
+        return String.format (" *########## %s ########\n " +
+                        "* 이름: %s\n" +
+                        "* > 국어: %d점\n" +
+                        "* > 영어: %d점\n" +
+                        "* > 수학: %d점\n" +
+                        "* 총점: %d점\n" +
+                        "* 평균(정수): %d점\n" +
+                        "* 합격여부: %s\n" +
+                        "* #######################\n ", GradeDTO.GRADE,
+                grade.getName (),
+                grade.getKor (),
+                grade.getEng (),
+                grade.getMath (), total, avg, pass);
     }
 
     @Override
     public String login(LoginDTO login) {
-        return null;
+        return (login.getPw ().equals(LoginDTO.PASSWORD)) ?
+                String.format(" %s 님의 비밀번호 %s 가 맞습니다. 로그인 성공 ",login.getName (),login.getPw ())
+                : String.format(" %s 님의 ID 는 맞고, 비밀번호 %s 가 틀립니다. 로그인 실패 ",login.getId (),login.getPw ());
     }
 }

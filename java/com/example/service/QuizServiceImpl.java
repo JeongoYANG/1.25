@@ -60,36 +60,24 @@ public class QuizServiceImpl implements QuizService{
 
     @Override
     public void quiz4(String[] arr) {
-        System.out.println(" Q4 팀원별 과제 수를 출력하세요 ");
-        int count = 0;
-        String countManager = "";
-        System.out.println (countManager);
-        countManager += arr[0]+" (2개),";
-        countManager += arr[1]+" (2개),";
-        countManager += arr[2]+" (2개),";
-        countManager += arr[3]+" (2개),";
-        countManager += arr[4]+" (2개) ";
-        countManager = "";
-        int count0 = 0;
-        int count1 = 0;
-        int count2 = 0;
-        int count3 = 0;
-        int count4 = 0;
+        System.out.println(" Q4 팀원별 과제 수를 출력하세요 예) 홍정명 (2개) 노홍주 (2개) 양정오 (2개) 전종형 (2개) 정경준 (2개) ");
+
+
+        String s = "";
         int[] intArr = new int[5];
-
-        for (int i = 0; i< arr.length; i++){
-            if (arr[i].equals (arr[i%5])) {count0++;}
-            if (arr[i].equals (arr[6])) {count1++;}
-            if (arr[i].equals (arr[7])) {count2++;}
-            if (arr[i].equals (arr[8])) {count3++;}
-            if (arr[i].equals (arr[9])) {count4++;}
+        int[] resArr = new int[5];
+        for (int i = 5; i < arr.length; i++) {
+            int a = i % 5;
+            int j = 0;
+            for (; j < 5; j++) {
+                if (a == j) {
+                    intArr[j]++;
+                }
+                resArr = intArr;
+            }
         }
-        System.out.println (arr[0]+"의 카운트는 "+count0);
-        System.out.println (arr[1]+"의 카운트는 "+count1);
-        System.out.println (arr[2]+"의 카운트는 "+count2);
-        System.out.println (arr[3]+"의 카운트는 "+count3);
-        System.out.println (arr[4]+"의 카운트는 "+count4);
-
-        System.out.println (countManager);
+        for(int i = 0; i < 5; i++){
+            System.out.println(arr[i]+"("+resArr[i]+"),");
+        }
     }
 }

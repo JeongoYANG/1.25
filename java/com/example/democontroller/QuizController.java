@@ -29,10 +29,10 @@ public class QuizController {
         QuizService service = new QuizServiceImpl() {};
         while (true) {
             System.out.println("[MENU] 0.EXIT\n " +
-                    "1.팀별 과제 출력 \n" +
+                    "1. 팀별 과제 출력 \n" +
                     "2. 팀장이 맡은 과제만 출력 \n" +
                     "3. 큐를 담당한 사람을 출력 \n" +
-                    "4.팀원별 과제 수를 출력\n");
+                    "4. 팀원별 과제 수를 출력\n");
             switch (scanner.next()) {
                 case "0":
                     System.out.println("시스템종료");

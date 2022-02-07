@@ -34,7 +34,7 @@ public class Feb07Controller {
 
         while (true){
             String s = "";
-            System.out.println("(MENU) 0.Exit, 1.Dice, 2.Rps 3.GetPrime, 4.LeapYear, 5.NumberGolf,");
+            System.out.println("(MENU) 0.Exit, 1.Dice, 2.Rps 3.GetPrime, 4.LeapYear, 5.NumberGolf");
             switch (scanner.next()){
                 case "0" :
                     System.out.println("Exit,");

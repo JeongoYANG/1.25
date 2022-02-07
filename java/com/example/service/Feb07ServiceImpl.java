@@ -2,6 +2,7 @@ package com.example.service;
 
 import java.util.Scanner;
 import java.util.Random;
+
 /**
  * packageName: com.example.service
  * fileName   : Feb07Service
@@ -16,9 +17,9 @@ import java.util.Random;
  * ================================
  * 2022-02-07         yangjeongo        최초 생성
  */
-public class Feb07ServiceImpl implements Feb07Service{
-    Scanner scanner = new Scanner(System.in);
+public class Feb07ServiceImpl implements Feb07Service {
     Random random = new Random();
+
     @Override
     public void dice(Scanner scanner) {
         System.out.println("주사위 게임");
@@ -42,22 +43,19 @@ public class Feb07ServiceImpl implements Feb07Service{
     @Override
     public void numberGolf(Scanner scanner) {
         System.out.println("숫자 맞추기 게임");
-        int num = random.nextInt(100)+1;
-        while (true){
+        int num = random.nextInt(100) + 1;
+        while (true) {
             int value = scanner.nextInt();
-            if (num==value){
+            if (num == value) {
                 System.out.println("정답 입니다.");
                 break;
-            }
-            else if (num < value){
-                System.out.println("정답이 아닙디다. 난수가 더 작습니다.");
-            }
-            else if (num > value){
+            } else if (num < value) {
+                System.out.println("정답이 아닙니다. 난수가 더 작습니다.");
+            } else {
                 System.out.println("정답이 아닙니다. 난수가 더 큽니다");
-            }
-            else {
-                System.out.println("잘못 입력하셨습니다.");
             }
         }
     }
 }
+
+

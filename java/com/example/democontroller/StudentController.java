@@ -46,8 +46,8 @@ public class StudentController {
                     res = "BMI";
                     System.out.println (BmiDTO.Bmi + "\n 이름, 키, 몸무게");
                     bmi.setName (scanner.next ());
-                    bmi.setCm (scanner.next ());
-                    bmi.setKg (scanner.next ());
+                    bmi.setWeight (scanner.nextDouble ());
+                    bmi.setTall (scanner.nextDouble ());
                     res = service.getBmi (bmi);
                     break;        case "2":
                     res = "CALC";

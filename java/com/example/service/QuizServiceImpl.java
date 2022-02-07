@@ -60,7 +60,7 @@ public class QuizServiceImpl implements QuizService{
 
     @Override
     public void quiz4(String[] arr) {
-        System.out.println(" Q4 팀원별 과제 수를 출력하세요 예) 홍정명 (2개) 노홍주 (2개) 양정오 (2개) 전종형 (2개) 정경준 (2개) ");
+        System.out.println(" Q4 팀원별 과제 수를 출력하세요 예) 홍정명 (2), 노홍주 (2), 양정오 (2), 전종형 (2), 정경준 (2), ");
 
 
         String s = "";

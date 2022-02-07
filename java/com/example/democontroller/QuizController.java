@@ -49,10 +49,8 @@ public class QuizController {
                 case "4":
                     service.quiz4(arr);
                     break;
-
             }
         }
-
     }
 }
 

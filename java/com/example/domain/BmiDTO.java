@@ -16,27 +16,32 @@ package com.example.domain;
  * 2022-01-25         yangjeongo        최초 생성
  */
 public class BmiDTO {
-    public static String Bmi = "Bmi측정앱";
+    public static String Bmi = "Bmi구하기";
     private String name;
-    private String cm;
-    private String kg;
+    private double tall;
+    private double weight;
 
     public String getName() {
         return name;
     }
-    public void setName(String name){
+
+    public void setName(String name) {
         this.name = name;
     }
-    public String getCm(){
-        return cm;
+
+    public double getTall() {
+        return tall;
     }
-    public void setCm(String cm){
-        this.cm = cm;
+
+    public void setTall(double tall) {
+        this.tall = tall;
     }
-    public String getKg(){
-        return kg;
+
+    public double getWeight() {
+        return weight;
     }
-    public void setKg(String kg){
-        this.kg = kg;
+
+    public void setWeight(double weight) {
+        this.weight = weight;
     }
 }

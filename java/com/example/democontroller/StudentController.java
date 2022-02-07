@@ -27,7 +27,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-03         yangjeongo        최초 생성
  */
-public class DemoController {
+public class StudentController {
     public static void main(String[] args) {
         Scanner scanner = new Scanner (System.in);
         CalcDTO Cacl = new CalcDTO ();

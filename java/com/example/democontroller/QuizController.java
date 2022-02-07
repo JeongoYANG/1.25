@@ -1,7 +1,5 @@
 package com.example.democontroller;
 
-import com.example.domain.GradeDTO;
-
 import java.util.Scanner;
 
 /**
@@ -18,7 +16,7 @@ import java.util.Scanner;
  * ================================
  * 2022-02-03         yangjeongo        최초 생성
  */
-public class TempController {
+public class QuizController {
     public static void main(String[] args) {
         String[] arr = {"홍정명", "노홍주", "양정오", "전종현", "정경준",
                 "깊이", "정렬", "그래프", "해시", "완전탐색"

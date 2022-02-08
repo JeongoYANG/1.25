@@ -27,17 +27,40 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void rps(Scanner scanner) {
+        int user = 0;
+        int com = (int)(Math.random()*3);
         System.out.println("가위바위보 게임");
+        System.out.println("0.가위 1.바위 2.보 선택");
+        user = scanner.nextInt();
+        String[] str ={"가위","바위","보"};
+        System.out.println("컴퓨터 : "+str[com]+", 사용자 : "+str[user]);
+        switch (com-user){
+            case 1: case -2:
+                System.out.println("컴퓨터 승");break;
+            case 2: case -1:
+                System.out.println("사용자 승");break;
+            default:
+                System.out.println("비김");break;
+        }
+
     }
 
     @Override
     public void getPrime(Scanner scanner) {
+
         System.out.println("소수 구하기 게임");
     }
 
     @Override
     public void leapYear(Scanner scanner) {
-        System.out.println("달력");
+
+        System.out.println("년도를 입력해주세요");
+        int s = scanner.nextInt();
+        if(s % 4 == 0 && s % 100 != 0 || s % 400 == 0){
+            System.out.println(s + "년은 윤년이다.");}
+        else {
+            System.out.println(s + "년은 평년이다.");
+        }
     }
 
     @Override

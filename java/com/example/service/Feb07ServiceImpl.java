@@ -22,7 +22,24 @@ public class Feb07ServiceImpl implements Feb07Service {
 
     @Override
     public void dice(Scanner scanner) {
-        System.out.println("주사위 게임");
+        int answer = (int) (Math.random () * 6);
+        int input = 0;
+        while (true) {
+            System.out.println ("1과 6사이 값을 입력하세요");
+            input = scanner.nextInt ();
+            if (input < answer) {
+                System.out.println ("주사위 : "+answer);
+                System.out.println ("오답입니다.");
+            } else if (input > answer) {
+                System.out.println ("주사위 : "+answer);
+                System.out.println ("오답입니다.");
+            }
+            else if(input==answer){
+                System.out.println ("주사위 : "+answer);
+                System.out.println ("정답입니다.");
+                break;
+            }
+        }
     }
 
     @Override

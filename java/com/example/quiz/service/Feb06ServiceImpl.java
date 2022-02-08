@@ -14,7 +14,7 @@ package com.example.quiz.service;
  * ================================
  * 2022-02-07         yangjeongo        최초 생성
  */
-public class QuizServiceImpl implements QuizService{
+public class Feb06ServiceImpl implements Feb06Service {
     @Override
     public void quiz1(String[] arr) {
         System.out.println(" Q1. 팀별 과제를 출력하세요 ");

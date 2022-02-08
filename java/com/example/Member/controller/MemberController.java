@@ -25,8 +25,7 @@ import java.util.Scanner;
  * 2022-02-03         yangjeongo        최초 생성
  */
 public class MemberController {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner (System.in);
+    public void execute(Scanner scanner) {
         CalcDTO Cacl = new CalcDTO ();
         BmiDTO bmi = new BmiDTO ();
         GoogleDTO Google = new GoogleDTO ();

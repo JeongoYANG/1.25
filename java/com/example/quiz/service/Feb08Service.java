@@ -1,10 +1,9 @@
-package com.example.quiz.controller;
-
+package com.example.quiz.service;
 import java.util.Scanner;
 
 /**
- * packageName: com.example.quiz.controller
- * fileName   : Feb09controller
+ * packageName: com.example.quiz.service
+ * fileName   : Feb08Service
  * author     : yangjeongo
  * date       : 2022-02-08
  * desc       :
@@ -16,8 +15,10 @@ import java.util.Scanner;
  * ================================
  * 2022-02-08         yangjeongo        최초 생성
  */
-public class Feb09controller {
-    public void execute(Scanner scanner){
-
-    }
+public interface Feb08Service {
+    void lotto(Scanner scanner);
+    void baseball(Scanner scanner);
+    void booking(Scanner scanner);
+    void bank(Scanner scanner);
+    void gugudan(Scanner scanner);
 }

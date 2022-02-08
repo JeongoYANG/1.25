@@ -1,8 +1,6 @@
 package com.example.service;
-
 import java.util.Scanner;
 import java.util.Random;
-
 /**
  * packageName: com.example.service
  * fileName   : Feb07Service
@@ -19,7 +17,6 @@ import java.util.Random;
  */
 public class Feb07ServiceImpl implements Feb07Service {
     Random random = new Random();
-
     @Override
     public void dice(Scanner scanner) {
         int answer = (int) (Math.random () * 6);
@@ -41,7 +38,6 @@ public class Feb07ServiceImpl implements Feb07Service {
             }
         }
     }
-
     @Override
     public void rps(Scanner scanner) {
         int user = 0;
@@ -59,15 +55,12 @@ public class Feb07ServiceImpl implements Feb07Service {
             default:
                 System.out.println("비김");break;
         }
-
     }
-
     @Override
     public void getPrime(Scanner scanner) {
 
         System.out.println("소수 구하기 게임");
     }
-
     @Override
     public void leapYear(Scanner scanner) {
 
@@ -79,7 +72,6 @@ public class Feb07ServiceImpl implements Feb07Service {
             System.out.println(s + "년은 평년이다.");
         }
     }
-
     @Override
     public void numberGolf(Scanner scanner) {
         System.out.println("숫자 맞추기 게임");
@@ -97,5 +89,3 @@ public class Feb07ServiceImpl implements Feb07Service {
         }
     }
 }
-
-

@@ -1,7 +1,16 @@
 package com.example.Member.domain;
 
-public class LoginDTO {
+public class UserDTO {
     public static String Login = "로그인 앱";
+
+    private final static UserDTO userDTO = new UserDTO();
+
+    private UserDTO(){}
+
+    public static UserDTO getInstance(){
+        return userDTO;
+    }
+
     private String id;
     private String pw;
     private String name;

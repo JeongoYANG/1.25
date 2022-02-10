@@ -15,9 +15,20 @@ package com.example.Member.domain;
  */
 public class CalcDTO {
     public static String CALC = "계산기";
+
+    private final static CalcDTO calcDTO = new CalcDTO();
+
+    private CalcDTO(){}
+
+    public static CalcDTO getInstance(){
+        return calcDTO;
+    }
+
     private int num1;
     private int num2;
     private String opcode;
+
+
 
     public int getNum1(){return num1;}
     public void setNum1(int num1){this.num1 = num1;}

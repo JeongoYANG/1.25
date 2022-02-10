@@ -17,6 +17,11 @@ package com.example.Member.domain;
  */
 public class BmiDTO {
     public static String Bmi = "Bmi구하기";
+    private final static BmiDTO bmiDTO = new BmiDTO();
+    public BmiDTO(){}
+    public static BmiDTO getInstance(){
+        return bmiDTO;
+    }
     private String name;
     private double tall;
     private double weight;

@@ -4,7 +4,7 @@ import com.example.Member.domain.BmiDTO;
 import com.example.Member.domain.GoogleDTO;
 import com.example.Member.domain.CalcDTO;
 import com.example.Member.domain.GradeDTO;
-import com.example.Member.domain.LoginDTO;
+import com.example.Member.domain.UserDTO;
 import com.example.Member.service.MemberService;
 import com.example.Member.service.MemberServiceImpl;
 
@@ -26,11 +26,7 @@ import java.util.Scanner;
  */
 public class MemberController {
     public void execute(Scanner scanner) {
-        CalcDTO Cacl = new CalcDTO ();
-        BmiDTO bmi = new BmiDTO ();
-        GoogleDTO Google = new GoogleDTO ();
-        GradeDTO Grade = new GradeDTO ();
-        LoginDTO login = new LoginDTO ();
+
         MemberService service = new MemberServiceImpl();
         while (true) {
             System.out.println ("메뉴 선택");
@@ -45,40 +41,45 @@ public class MemberController {
                 case "1":
                     res = "BMI";
                     System.out.println (BmiDTO.Bmi + "\n 이름, 키, 몸무게");
-                    bmi.setName (scanner.next ());
-                    bmi.setWeight (scanner.nextDouble ());
-                    bmi.setTall (scanner.nextDouble ());
-                    res = service.getBmi (bmi);
+                    BmiDTO b = BmiDTO.getInstance();
+                    b.setName (scanner.next ());
+                    b.setWeight (scanner.nextDouble ());
+                    b.setTall (scanner.nextDouble ());
+                    res = service.getBmi (b);
                     break;        case "2":
                     res = "CALC";
                     System.out.println (CalcDTO.CALC + "\n 숫자1, 연산자, 숫자2 입력");
-                    Cacl.setNum1 (scanner.nextInt ());
-                    Cacl.setOpcode (scanner.next ());
-                    Cacl.setNum2 (scanner.nextInt ());
-                    res = service.calc (Cacl);
+                    CalcDTO c = CalcDTO.getInstance();
+                    c.setNum1 (scanner.nextInt ());
+                    c.setOpcode (scanner.next ());
+                    c.setNum2 (scanner.nextInt ());
+                    res = service.calc (c);
                     break;
                 case "3":
                     res = "GOOGLE";
                     System.out.println (GoogleDTO.Google + "\n 검색어 입력");
-                    Google.setSearch ();
-                    res = service.search (Google);
+                    GoogleDTO go = GoogleDTO.getInstance();
+                    go.setSearch ();
+                    res = service.search (go);
                     break;
                 case "4":
                     res = "GRADE";
                     System.out.println (GradeDTO.GRADE + "\n 이름, 국어, 영어, 수학 ");
-                    Grade.setName (scanner.next ());
-                    Grade.setKor (scanner.nextInt ());
-                    Grade.setEng (scanner.nextInt ());
-                    Grade.setMath (scanner.nextInt ());
-                    res = service.getGrade (Grade);
+                    GradeDTO g = GradeDTO.getInstance();
+                    g.setName (scanner.next ());
+                    g.setKor (scanner.nextInt ());
+                    g.setEng (scanner.nextInt ());
+                    g.setMath (scanner.nextInt ());
+                    res = service.getGrade (g);
                     break;
                 case "5":
                     res = "LOGIN";
-                    System.out.println (LoginDTO.Login + "\n 아이디, 비번, 이름 ");
-                    login.setName (scanner.next ());
-                    login.setId (scanner.next ());
-                    login.setPw (scanner.next ());
-                    res = service.login (login);
+                    System.out.println (UserDTO.Login + "\n 아이디, 비번, 이름 ");
+                    UserDTO u = UserDTO.getInstance();
+                    u.setName (scanner.next ());
+                    u.getInstance().setId (scanner.next ());
+                    u.getInstance().setPw (scanner.next ());
+                    res = service.login (u);
                     break;
                 default:
                     res = "1~5 중 선택하세요";

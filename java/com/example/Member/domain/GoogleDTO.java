@@ -17,6 +17,11 @@ package com.example.Member.domain;
 
 public class GoogleDTO {
     public static String Google = "Google";
+    private final static GoogleDTO googleDTO = new GoogleDTO();
+    public GoogleDTO(){}
+    public static GoogleDTO getInstance(){
+        return googleDTO;
+    }
     private String search;
     public String getSearch(){
         return search;

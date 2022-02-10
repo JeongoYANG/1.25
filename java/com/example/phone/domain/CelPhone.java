@@ -20,7 +20,7 @@ public class CelPhone extends Phonee{
 
     private boolean portable;
     private String move;
-    public CelPhone (String company, String move, String kind){
+    public CelPhone (String kind, String company, String move  ){
         super(kind,company);
         this.move = move;
 

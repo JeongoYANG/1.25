@@ -31,7 +31,7 @@ public class IPhone extends CelPhone{
 
     @Override
     public String toString() {
-        return String.format("%s에서 %s을 사용해서 %s중에 [뉴스]를 검색한다"
+        return String.format("%s에서 %s을 사용해서 %s중에 %s를 검색한다"
         , super.getCompany(), KIND, super.getMove(),search);
     }
 }

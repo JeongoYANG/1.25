@@ -26,7 +26,7 @@ public class QuizController {
 
 
         while (true) {
-            System.out.println("0.Exit, 1).2월6일, 2).2월7일, 3).2월8일, 4).2월9일");
+            System.out.println("0.Exit, 1).2월6일, 2).2월7일, 3).2월8일, 4).2월10일");
             switch (scanner.next()) {
                 case "0":
                     System.out.println("0Exit.");
@@ -125,6 +125,20 @@ public class QuizController {
                                 break;
                             default:
                                 System.out.println("잘못 입력하셨습니다.");
+                        }
+                    }
+                case "4":
+                    System.out.println("4).2월10일");
+                    while (true){
+                        System.out.println("(메뉴) 0.종료, 1.bobbleSort,insertionSort,selectionSort" +
+                                "2.quickSort,mergeSort, 3.magicSquare, 4.zigzag, 5.rectangleStarPrint.triangleStarPrint");
+                        switch (scanner.next()){
+                            case "0":
+                                System.out.println("종료");
+                                return;
+                            case "1":
+                                System.out.println("1.bobbleSort,insertionSort,selectionSort");
+
                         }
                     }
             }
